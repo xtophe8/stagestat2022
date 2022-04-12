@@ -1,0 +1,13 @@
+library(readxl)
+violence <- read_excel("C:/Users/cschnitzler/Dropbox/staps/2021 2022/maraps/UE recherche/Maraps 2/gonella.xlsx")
+View(violence)
+
+str(violence)
+violence$Sport<-as.factor (violence$Sport)
+violence$Fac_STAPS<-as.factor (violence$Fac_STAPS)
+violence$Annee<-as.factor (violence$Annee)
+violence$`Option sportive`<-as.factor (violence$`Option sportive`)
+violence$`Niveau competition`<-as.factor (violence$`Niveau competition`)
+str(violence)
+library(Factoshiny)
+PCAshiny(violence)
